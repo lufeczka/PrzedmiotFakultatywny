@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="0b9a9a53-60ac-4324-bd68-ae47565905e7" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
     </list>
     <ignored path="elista.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -58,20 +57,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="application.properties" pinned="false" current-in-tab="false">
+      <file leaf-file-name="application.properties" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="7" selection-end-column="35" />
+            <state vertical-scroll-proportion="0.3115183">
+              <caret line="7" column="35" selection-start-line="7" selection-start-column="35" selection-end-line="7" selection-end-column="35" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5267606">
+            <state vertical-scroll-proportion="-6.9259257">
               <caret line="11" column="35" selection-start-line="11" selection-start-column="35" selection-end-line="11" selection-end-column="35" />
               <folding />
             </state>
@@ -844,7 +843,7 @@
       <workItem from="1458718887656" duration="307000" />
       <workItem from="1458719549855" duration="17000" />
       <workItem from="1458719605579" duration="1161000" />
-      <workItem from="1458722903746" duration="1665000" />
+      <workItem from="1458722903746" duration="1728000" />
     </task>
     <task id="LOCAL-00001" summary="Konfiguracja JDBC">
       <created>1458666038958</created>
@@ -870,11 +869,17 @@
       <option name="project" value="LOCAL" />
       <updated>1458724054716</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Dodanie danych o bazie do readme">
+      <created>1458724590741</created>
+      <option name="number" value="00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1458724590741</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7520000" />
+    <option name="totallyTimeSpent" value="7583000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -934,7 +939,8 @@
     <MESSAGE value="V. Dostęp do bazy danych z poziomu IntelliJ" />
     <MESSAGE value="Swagger" />
     <MESSAGE value="Build success" />
-    <option name="LAST_COMMIT_MESSAGE" value="Build success" />
+    <MESSAGE value="Dodanie danych o bazie do readme" />
+    <option name="LAST_COMMIT_MESSAGE" value="Dodanie danych o bazie do readme" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1768,18 +1774,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+    <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="7" selection-end-column="35" />
+        <state vertical-scroll-proportion="-6.9259257">
+          <caret line="11" column="35" selection-start-line="11" selection-start-column="35" selection-end-line="11" selection-end-column="35" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5267606">
-          <caret line="11" column="35" selection-start-line="11" selection-start-column="35" selection-end-line="11" selection-end-column="35" />
+        <state vertical-scroll-proportion="0.3115183">
+          <caret line="7" column="35" selection-start-line="7" selection-start-column="35" selection-end-line="7" selection-end-column="35" />
           <folding />
         </state>
       </provider>
