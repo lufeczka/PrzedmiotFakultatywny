@@ -1,13 +1,13 @@
-package com.elista;
+package com.elista.user.dto;
 
 import io.swagger.annotations.ApiModel;
 import java.io.Serializable;
 import java.util.Date;
 
-
 /**
  * Created by maciej.chyczewski on 23-03-2016.
  */
+
 @ApiModel
 public class UserDTO implements Serializable {
     private Long id;
