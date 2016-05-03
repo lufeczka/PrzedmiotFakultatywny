@@ -4,34 +4,39 @@ import org.joda.time.DateTime;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.Date;
 
 /**
- * Created by Thru on 2016-05-03.
+ * Created by Thrundi on 2016-05-03.
  */
 @MappedSuperclass
 @SequenceGenerator(allocationSize = 1, name="SEQ", sequenceName="GEN_BASE_ID")
-public abstract class baseOB implements Serializable{
+public abstract class BaseOB implements Serializable{
     @Id
     @Column(name="ID")
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "SEQ")
-    private long id;
+    private Long id;
 
     @Column(name="ins_date")
     @Temporal(value = TemporalType.TIMESTAMP)
-    private DateTime ins_date;
+    private Date ins_date;
 
     @Column(name="edi_date")
     @Temporal(value = TemporalType.TIMESTAMP)
-    private DateTime edi_date;
+    private Date edi_date;
 
-    public baseOB() {
+    public BaseOB() {
     }
 
-    public DateTime getEdi_date() {
+    public Long getId() {
+        return id;
+    }
+
+    public Date getEdi_date() {
         return edi_date;
     }
 
-    public DateTime getIns_date() {
+    public Date getIns_date() {
         return ins_date;
     }
 }

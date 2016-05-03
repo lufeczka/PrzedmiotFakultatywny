@@ -1,37 +1,36 @@
 package com.elista.base.dto;
 
-import org.joda.time.DateTime;
-
 import java.io.Serializable;
+import java.util.Date;
 
 /**
  * Created by Thrundi on 2016-05-03.
  */
 public abstract class BaseDTO implements Serializable{
-    private long id;
-    private DateTime ins_date;
-    private DateTime edi_date;
+    private Long id;
+    private Date ins_date;
+    private Date edi_date;
 
     public BaseDTO() {
     }
 
-    public BaseDTO(long id) {
+    public BaseDTO(Long id) {
         this.id = id;
     }
 
-    public long getId() {
+    public Long getId() {
         return id;
     }
 
-    public DateTime getIns_date() {
+    public Date getIns_date() {
         return ins_date;
     }
 
-    public DateTime getEdi_date() {
+    public Date getEdi_date() {
         return edi_date;
     }
 
-    public void setId(long id) {
+    public void setId(Long id) {
         this.id = id;
     }
 }

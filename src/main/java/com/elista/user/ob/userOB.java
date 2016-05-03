@@ -1,19 +1,22 @@
-package com.elista.user.dto;
+package com.elista.user.ob;
 
-import java.io.Serializable;
-import java.util.List;
-
+import com.elista.base.ob.BaseOB;
+import com.elista.position.ob.PositionOB;
 import org.joda.time.DateTime;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
-import com.elista.base.dto.BaseDTO;
-import com.elista.position.dto.PositionDTO;
-import io.swagger.annotations.ApiModel;
+
+import javax.persistence.*;
+import java.util.List;
 
 /**
  * Created by Thrundi on 2016-05-03.
  */
-@ApiModel
-public class UserDTO extends BaseDTO implements Serializable {
+
+@Entity
+@Table(name = "users")
+@SequenceGenerator(allocationSize = 1, name = "SEQ", sequenceName = "GEN_USER_ID")
+public class UserOB extends BaseOB {
+    @Column(unique = true)
     private String email;
     private String password;
     private String name;
@@ -21,18 +24,19 @@ public class UserDTO extends BaseDTO implements Serializable {
     private String phoneNumber;
     private String address;
     private DateTime activeUntil;
-    private List<PositionDTO> positions;
 
-    public UserDTO() {
+    @ManyToMany()
+    @JoinColumn(name = "positions_id", referencedColumnName = "id")
+    private List<PositionOB> positions;
+    public UserOB() {
     }
 
-    public UserDTO(Long id, String password, String email) {
+    public UserOB(Long id, String password, String email) {
         setPassword(password);
         this.email = email;
     }
 
-    public UserDTO(long id, List<PositionDTO> positions, String email, String password, String name, String surname, String phoneNumber, String address, DateTime activeUntil) {
-        super(id);
+    public UserOB(long id, List<PositionOB> positions,  String email, String password, String name, String surname, String phoneNumber, String address, DateTime activeUntil) {
         this.positions = positions;
         this.email = email;
         this.password = password;
@@ -49,7 +53,13 @@ public class UserDTO extends BaseDTO implements Serializable {
 
     public Boolean isPasswordValid(String password) {
         BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
-        return this.password == passwordEncoder.encode(password);
+        String hashedPassword = passwordEncoder.encode(password);
+
+        return this.password == hashedPassword;
+    }
+
+    public String getPassword() {
+        return password;
     }
 
     public String getName() {
@@ -68,7 +78,7 @@ public class UserDTO extends BaseDTO implements Serializable {
         return address;
     }
 
-    public List<PositionDTO> getPositions() {
+    public List<PositionOB>  getPositions() {
         return positions;
     }
 
@@ -101,7 +111,11 @@ public class UserDTO extends BaseDTO implements Serializable {
         this.address = address;
     }
 
-    public void addPosition(PositionDTO position) {
+    public void setPositions(List<PositionOB> positions) {
+        this.positions = positions;
+    }
+
+    public void addPosition(PositionOB position) {
         this.positions.add(position);
     }
 
