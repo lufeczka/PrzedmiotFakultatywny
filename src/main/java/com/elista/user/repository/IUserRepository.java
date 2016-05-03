@@ -4,19 +4,23 @@ import com.elista.user.dto.UserDTO;
 import com.elista.user.ob.UserOB;
 import org.joda.time.DateTime;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.repository.PagingAndSortingRepository;
+import org.springframework.data.repository.query.Param;
+import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 
 import java.util.List;
 
 /**
  * Created by Thrundi on 2016-05-03.
  */
-public interface IUserRepository extends JpaRepository<UserOB, Long> {
-    List<UserOB> findByNameStartsWith(String name);
-    List<UserOB> findBySurnameStartsWith(String surname);
-    List<UserOB> findByNameStartsWithOrSurnameStartsWith(String name, String surname);
-    List<UserOB> findByNameEqualsAndSurnameEquals(String name, String surname);
-    List<UserOB> findByActiveUntilBetween(DateTime activeUntil, DateTime activeUntil2);
-    List<UserOB> findByEmailStartsWith(String email);
-    List<UserOB> findByEmailEquals(String email);
-    List<UserOB> findByIdEquals(Long id);
+@RepositoryRestResource(collectionResourceRel = "users", path = "users")
+public interface IUserRepository extends PagingAndSortingRepository<UserOB, Long> {
+    List<UserOB> findByNameStartsWith(@Param("name") String name);
+    List<UserOB> findBySurnameStartsWith(@Param("surname") String surname);
+    List<UserOB> findByNameStartsWithOrSurnameStartsWith(@Param("name") String name, @Param("surname") String surname);
+    List<UserOB> findByNameEqualsAndSurnameEquals(@Param("name") String name, @Param("surname") String surname);
+    List<UserOB> findByActiveUntilBetween(@Param("activeFrom") DateTime activeFrom, @Param("activeTo") DateTime activeTo);
+    List<UserOB> findByEmailStartsWith(@Param("email") String email);
+    List<UserOB> findByEmailEquals(@Param("email") String email);
+    List<UserOB> findByIdEquals(@Param("id") Long id);
 }

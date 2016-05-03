@@ -27,7 +27,8 @@ public class UserService implements IUserService{
 
     @Override
     public List<UserDTO> findAll() {
-        return UserConverter.UserOBToDTO(iUserRepository.findAll());
+        //return UserConverter.UserOBToDTO(iUserRepository.findAll());
+        return null; //TODO: odkomentowac to wyzej, testy
     }
 
     @Override

@@ -17,7 +17,7 @@ import java.util.List;
 public class UserController {
     @Autowired
     IUserService iUserService;
-
+/*
     @RequestMapping(value = "findAll", method = RequestMethod.GET)
     @ResponseBody
     public ResponseEntity<List<UserDTO>> findAll(){
@@ -47,5 +47,5 @@ public class UserController {
     public ResponseEntity<List<UserDTO>> findByIdEquals(@PathVariable("id")Long id) {
         return new ResponseEntity<List<UserDTO>>(iUserService.findByIdEquals(id), HttpStatus.OK);
     }
-
+*/ //Nowy sposob wystawiania RESTow, patrz IUserRepository
 }
