@@ -25,11 +25,12 @@ public class UserService implements IUserService{
     @Autowired
     IUserRepository iUserRepository;
 
+    /*
     @Override
     public List<UserDTO> findAll() {
-        //return UserConverter.UserOBToDTO(iUserRepository.findAll());
-        return null; //TODO: odkomentowac to wyzej, testy
+        return UserConverter.UserOBToDTO(iUserRepository.findAll());
     }
+    */
 
     @Override
     public List<UserDTO> findByNameStartsWith(String name) {

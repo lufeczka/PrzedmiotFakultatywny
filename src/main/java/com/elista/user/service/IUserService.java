@@ -15,7 +15,7 @@ import java.util.List;
 @Service
 @Transactional
 public interface IUserService {
-    List<UserDTO> findAll();
+    //List<UserDTO> findAll();
     List<UserDTO> findByNameStartsWith(String name);
     List<UserDTO> findBySurnameStartsWith(String surname);
     List<UserDTO> findByNameStartsWithOrSurnameStartsWith(String name, String surname);
