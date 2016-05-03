@@ -7,15 +7,15 @@ import java.io.Serializable;
 /**
  * Created by Thrundi on 2016-05-03.
  */
-public abstract class baseDTO implements Serializable{
+public abstract class BaseDTO implements Serializable{
     private long id;
     private DateTime ins_date;
     private DateTime edi_date;
 
-    public baseDTO() {
+    public BaseDTO() {
     }
 
-    public baseDTO(long id) {
+    public BaseDTO(long id) {
         this.id = id;
     }
 
