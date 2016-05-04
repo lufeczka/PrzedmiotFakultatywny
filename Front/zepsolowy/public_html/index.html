@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="Stylesheet" type="text/css" href="css/resetcss.css" />
+        <link rel="Stylesheet" type="text/css" href="css/bootstrap.css" />
+        <link rel="Stylesheet" type="text/css" href="css/style.css" />
+        <script type="text/javascript" src="js/">
+        </script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                        <div class="col-md-4 col-md-offset-4">
+                        <div class="panel panel-default">
+                                        <div class="panel-heading">
+                                        <h3 class="panel-title">Logowanie</h3>
+                                        </div>
+                                        <div class="panel-body">
+                                        <form accept-charset="UTF-8" role="form">
+                            <fieldset>
+                                                <div class="form-group">
+                                                    <input class="form-control" placeholder="E-mail" name="email" type="text">
+                                                </div>
+                                                <div class="form-group">
+                                                        <input class="form-control" placeholder="Password" name="password" type="password" value="">
+                                                </div>
+                                                <div class="checkbox">
+                                                <label>
+                                                        <input name="remember" type="checkbox" value="Remember Me"> Zapamiętaj mnie
+                                                </label>
+                                            </div>
+                                                <input class="btn btn-lg btn-success btn-block" type="submit" value="Login">
+                                        </fieldset>
+                                        </form>
+                                    </div>
+                                </div>
+                        </div>
+                </div>
+        </div>
+        
+        <br>
+        <br>
+        <script language="javascript">
+        <!--//
+        /*This Script allows people to enter by using a form that asks for a
+        UserID and Password*/
+        function pasuser(form) {
+        if (form.id.value==="JavaScript") { 
+        if (form.pass.value==="Kit") {              
+        location="poZalogowaniu.html"; 
+        } else {
+        alert("Invalid Password");
+        }
+        } else {  alert("Invalid UserID");
+        }
+        }
+        //-->
+        </script>
+
+        <center>
+        <table bgcolor="white" cellpadding="12" border="10">
+        <tr><td colspan="2"><center><h1><i><b>Login
+        Area</b></i></h1></center></td></tr>
+        <tr><td><h1><i><b>UserID:</b></i></h1></td><td><form name="login"><input
+        name="id" type="text"></td></tr>
+        <tr><td><h1><i><b>Password:</b></i></h1></td><td><input name="pass"
+        type="password"></td></tr>
+        <tr><td><center><input type="button" value="Login"
+        onClick="pasuser(this.form)"></center></td><td><center><input
+        type="Reset"></form></td></tr></table></center> 
+    </body>
+</html>

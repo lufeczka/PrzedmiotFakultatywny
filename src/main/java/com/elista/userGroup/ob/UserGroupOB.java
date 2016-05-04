@@ -17,4 +17,5 @@ public class UserGroupOB implements Serializable {
     @Column(name="ID")
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "SEQ")
     private Long id;
+    //test
 }
