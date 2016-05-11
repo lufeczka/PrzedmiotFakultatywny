@@ -1,9 +1,7 @@
 package com.elista.user.repository;
 
-import com.elista.user.dto.UserDTO;
 import com.elista.user.ob.UserOB;
 import org.joda.time.DateTime;
-import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.repository.PagingAndSortingRepository;
 import org.springframework.data.repository.query.Param;
 import org.springframework.data.rest.core.annotation.RepositoryRestResource;
