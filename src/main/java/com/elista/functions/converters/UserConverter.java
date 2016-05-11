@@ -16,11 +16,11 @@ public class UserConverter {
         return new UserDTO(userOB.getId(), PositionConverter.PositionOBToDTO(userOB.getPositions()), userOB.getEmail(), userOB.getPassword(), userOB.getName(), userOB.getSurname(), userOB.getPhoneNumber(), userOB.getAddress(), userOB.getActiveUntil());
     }
 
-    public static List<UserDTO> UserOBToDTO(List<UserOB> usersOB)
+    public static List<UserDTO> UserOBToDTO(List<UserOB> UsersOB)
     {
         List<UserDTO> usersDTO = new ArrayList<UserDTO>();
 
-        for (UserOB userOB: usersOB)
+        for (UserOB userOB: UsersOB)
             usersDTO.add(UserOBToDTO(userOB));
 
         return usersDTO;

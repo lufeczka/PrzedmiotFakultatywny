@@ -14,7 +14,7 @@ import java.util.List;
 
 @Entity
 @Table(name = "users")
-@SequenceGenerator(allocationSize = 1, name = "SEQ", sequenceName = "GEN_USER_ID")
+@SequenceGenerator(allocationSize = 1, name = "SEQ", sequenceName = "GEN_USERS_ID")
 public class UserOB extends BaseOB {
     @Column(unique = true)
     private String email;
@@ -36,7 +36,7 @@ public class UserOB extends BaseOB {
         this.email = email;
     }
 
-    public UserOB(long id, List<PositionOB> positions, String email, String password, String name, String surname, String phoneNumber, String address, DateTime activeUntil) {
+    public UserOB(long id, List<PositionOB> positions,  String email, String password, String name, String surname, String phoneNumber, String address, DateTime activeUntil) {
         this.positions = positions;
         this.email = email;
         this.password = password;

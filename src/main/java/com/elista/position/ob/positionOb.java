@@ -14,9 +14,10 @@ import java.io.Serializable;
 
 @Entity
 @Table(name = "positions")
-@SequenceGenerator(allocationSize = 1, name = "SEQ", sequenceName = "GEN_POSITION_ID")
+@SequenceGenerator(allocationSize = 1, name = "SEQ", sequenceName = "GEN_POSITIONS_ID")
 public class PositionOB extends BaseOB implements Serializable{
 
+    @Column(unique = true)
     private String name;
     @Column(unique = true)
     private String code;
