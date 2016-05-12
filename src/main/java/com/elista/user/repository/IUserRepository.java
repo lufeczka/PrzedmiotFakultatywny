@@ -30,5 +30,6 @@ public interface IUserRepository extends JpaRepository <UserOB, Long> {
     List<UserOB> findByActiveUntilBetween(@Param("activeFrom") DateTime activeFrom, @Param("activeTo") DateTime activeTo);
     List<UserOB> findByEmailStartsWith(@Param("email") String email);
     List<UserOB> findByEmailEquals(@Param("email") String email);
+    List<UserOB> findByEmailEqualsAndPasswordEquals(@Param("email") String email, @Param("password") String password);
 
 }

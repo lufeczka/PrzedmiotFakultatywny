@@ -3,7 +3,6 @@ package com.elista.user.ob;
 import com.elista.base.ob.BaseOB;
 import com.elista.position.ob.positionOB;
 import org.joda.time.DateTime;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 import javax.persistence.*;
 import java.util.List;
@@ -52,10 +51,7 @@ public class UserOB extends BaseOB {
     }
 
     public Boolean isPasswordValid(String password) {
-        BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
-        String hashedPassword = passwordEncoder.encode(password);
-
-        return this.password == hashedPassword;
+        return this.password == password;
     }
 
     public String getPassword() {
@@ -91,8 +87,7 @@ public class UserOB extends BaseOB {
     }
 
     public void setPassword(String password) {
-        BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
-        this.password = passwordEncoder.encode(password);
+        this.password = password;
     }
 
     public void setName(String name) {
