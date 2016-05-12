@@ -13,7 +13,7 @@ import io.swagger.annotations.ApiModel;
  * Created by Thrundi on 2016-05-03.
  */
 @ApiModel
-public class UserDTO extends BaseDTO implements Serializable {
+public class userDTO extends BaseDTO implements Serializable {
     private String email;
     private String password;
     private String name;
@@ -23,15 +23,15 @@ public class UserDTO extends BaseDTO implements Serializable {
     private DateTime activeUntil;
     private List<PositionDTO> positions;
 
-    public UserDTO() {
+    public userDTO() {
     }
 
-    public UserDTO(Long id, String password, String email) {
+    public userDTO(Long id, String password, String email) {
         setPassword(password);
         this.email = email;
     }
 
-    public UserDTO(long id, List<PositionDTO> positions, String email, String password, String name, String surname, String phoneNumber, String address, DateTime activeUntil) {
+    public userDTO(long id, List<PositionDTO> positions, String email, String password, String name, String surname, String phoneNumber, String address, DateTime activeUntil) {
         super(id);
         this.positions = positions;
         this.email = email;
