@@ -1,7 +1,7 @@
 package com.elista.plan.ob;
 
-import com.elista.base.ob.BaseOB;
-import com.elista.position.ob.positionOB;
+import com.elista.base.ob.baseOB;
+import com.elista.position.ob.positionOb;
 import com.elista.user.ob.UserOB;
 
 import javax.persistence.*;
@@ -16,7 +16,7 @@ import java.util.List;
 @Entity
 @Table(name = "plans")
 @SequenceGenerator(allocationSize = 1, name = "SEQ", sequenceName = "GEN_PLANS_ID")
-public class PlanOB extends BaseOB {
+public class PlanOB extends baseOB {
 
     @Column(unique = true)
     private String name;
@@ -28,12 +28,12 @@ public class PlanOB extends BaseOB {
     private List<UserOB> users;
 
     @ManyToOne()
-    private positionOB position;
+    private positionOb position;
 
     public PlanOB() {
     }
 
-    public PlanOB(String name, String code, List<UserOB> users, positionOB position) {
+    public PlanOB(String name, String code, List<UserOB> users, positionOb position) {
         this.name = name;
         this.code = code;
         this.users = users;
@@ -64,11 +64,11 @@ public class PlanOB extends BaseOB {
         this.users = users;
     }
 
-    public positionOB getPosition() {
+    public positionOb getPosition() {
         return position;
     }
 
-    public void setPosition(positionOB position) {
+    public void setPosition(positionOb position) {
         this.position = position;
     }
 }

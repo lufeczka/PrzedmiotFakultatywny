@@ -1,7 +1,7 @@
 package com.elista.position.dto;
 
 
-import com.elista.base.dto.BaseDTO;
+import com.elista.base.dto.baseDTO;
 import io.swagger.annotations.ApiModel;
 
 import java.io.Serializable;
@@ -10,7 +10,7 @@ import java.io.Serializable;
  * Created by Thrundi on 2016-05-03.
  */
 @ApiModel
-public class positionDTO extends BaseDTO implements Serializable {
+public class positionDTO extends baseDTO implements Serializable {
     private String name;
     private String code;
     private String division;
