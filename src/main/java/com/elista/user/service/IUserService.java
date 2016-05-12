@@ -15,4 +15,6 @@ import java.util.List;
 @Service
 @Transactional
 public interface IUserService {
+
+    UserOB createUser(UserOB user);
 }

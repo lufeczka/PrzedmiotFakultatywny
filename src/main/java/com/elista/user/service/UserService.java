@@ -24,4 +24,11 @@ public class UserService implements IUserService{
 
     @Autowired
     IUserRepository iUserRepository;
+
+    @Override
+    public UserOB createUser(UserOB user) {
+        UserOB userOB = user;
+        return userOB;
+    }
+
 }
