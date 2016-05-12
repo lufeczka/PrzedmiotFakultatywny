@@ -1,5 +1,7 @@
 package com.elista.plan.service;
 
+import com.elista.functions.exceptions.NullException;
+import com.elista.plan.ob.PlanOB;
 import org.jvnet.hk2.annotations.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -8,18 +10,7 @@ import org.springframework.transaction.annotation.Transactional;
  */
 @Service
 @Transactional
-public class IPlanService {
-
+public interface IPlanService {
+    long savePlan(PlanOB planOB) throws NullException;
+    PlanOB getPlan(Long planId);
 }
-
-/*
-package com.elista.user.service;
-
-import org.jvnet.hk2.annotations.Service;
-import org.springframework.transaction.annotation.Transactional;
-@Service
-@Transactional
-public interface IUserService {
-}
-
- */

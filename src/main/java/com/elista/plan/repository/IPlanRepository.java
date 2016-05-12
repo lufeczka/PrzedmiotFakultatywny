@@ -1,6 +1,7 @@
 package com.elista.plan.repository;
 
 import com.elista.plan.ob.PlanOB;
+import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.PagingAndSortingRepository;
 import org.springframework.data.repository.query.Param;
@@ -13,7 +14,7 @@ import java.util.List;
  * Created by Thrundi on 2016-05-04.
  */
 @RepositoryRestResource(collectionResourceRel = "plans", path = "plans")
-public interface IPlanRepository extends PagingAndSortingRepository<PlanOB, Long> {
+public interface IPlanRepository extends JpaRepository<PlanOB, Long> {
     List<PlanOB> findByNameStartsWith(@Param("name") String name);
     List<PlanOB> findByCodeStartsWith(@Param("code") String code);
     @Query("SELECT p FROM PlanOB p JOIN p.users u where u.id = ?1")
