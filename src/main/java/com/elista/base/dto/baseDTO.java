@@ -6,15 +6,15 @@ import java.util.Date;
 /**
  * Created by Thrundi on 2016-05-03.
  */
-public abstract class BaseDTO implements Serializable{
+public abstract class baseDTO implements Serializable{
     private Long id;
     private Date ins_date;
     private Date edi_date;
 
-    public BaseDTO() {
+    public baseDTO() {
     }
 
-    public BaseDTO(Long id) {
+    public baseDTO(Long id) {
         this.id = id;
     }
 

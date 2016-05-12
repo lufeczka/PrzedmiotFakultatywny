@@ -1,7 +1,7 @@
 package com.elista.plan.ob;
 
 import com.elista.base.ob.BaseOB;
-import com.elista.position.ob.PositionOB;
+import com.elista.position.ob.positionOB;
 import com.elista.user.ob.UserOB;
 
 import javax.persistence.*;
@@ -28,12 +28,12 @@ public class PlanOB extends BaseOB {
     private List<UserOB> users;
 
     @ManyToOne()
-    private PositionOB position;
+    private positionOB position;
 
     public PlanOB() {
     }
 
-    public PlanOB(String name, String code, List<UserOB> users, PositionOB position) {
+    public PlanOB(String name, String code, List<UserOB> users, positionOB position) {
         this.name = name;
         this.code = code;
         this.users = users;
@@ -64,11 +64,11 @@ public class PlanOB extends BaseOB {
         this.users = users;
     }
 
-    public PositionOB getPosition() {
+    public positionOB getPosition() {
         return position;
     }
 
-    public void setPosition(PositionOB position) {
+    public void setPosition(positionOB position) {
         this.position = position;
     }
 }

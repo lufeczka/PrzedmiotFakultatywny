@@ -10,15 +10,16 @@ import java.io.Serializable;
  * Created by Thrundi on 2016-05-03.
  */
 @ApiModel
-public class PositionDTO extends BaseDTO implements Serializable {
+public class positionDTO extends BaseDTO implements Serializable {
     private String name;
     private String code;
     private String division;
 
-    public PositionDTO() {
+
+    public positionDTO() {
     }
 
-    public PositionDTO(String division, String name, String code) {
+    public positionDTO(String division, String name, String code) {
         this.division = division;
         this.name = name;
         this.code = code;

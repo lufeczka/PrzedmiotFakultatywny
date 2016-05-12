@@ -15,7 +15,7 @@ import java.io.Serializable;
 @Entity
 @Table(name = "positions")
 @SequenceGenerator(allocationSize = 1, name = "SEQ", sequenceName = "GEN_POSITIONS_ID")
-public class PositionOB extends BaseOB implements Serializable{
+public class positionOb extends BaseOB implements Serializable{
 
     @Column(unique = true)
     private String name;
@@ -23,10 +23,10 @@ public class PositionOB extends BaseOB implements Serializable{
     private String code;
     private String division;
 
-    public PositionOB() {
+    public positionOb() {
     }
 
-    public PositionOB(String name, String code, String division) {
+    public positionOb(String name, String code, String division) {
         this.name = name;
         this.code = code;
         this.division = division;

@@ -1,7 +1,7 @@
 package com.elista.user.ob;
 
 import com.elista.base.ob.BaseOB;
-import com.elista.position.ob.PositionOB;
+import com.elista.position.ob.positionOB;
 import org.joda.time.DateTime;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
@@ -27,7 +27,7 @@ public class UserOB extends BaseOB {
 
     @ManyToMany()
     @JoinColumn(name = "positions_id", referencedColumnName = "id")
-    private List<PositionOB> positions;
+    private List<positionOB> positions;
     public UserOB() {
     }
 
@@ -36,7 +36,7 @@ public class UserOB extends BaseOB {
         this.email = email;
     }
 
-    public UserOB(long id, List<PositionOB> positions,  String email, String password, String name, String surname, String phoneNumber, String address, DateTime activeUntil) {
+    public UserOB(long id, List<positionOB> positions, String email, String password, String name, String surname, String phoneNumber, String address, DateTime activeUntil) {
         this.positions = positions;
         this.email = email;
         this.password = password;
@@ -78,7 +78,7 @@ public class UserOB extends BaseOB {
         return address;
     }
 
-    public List<PositionOB>  getPositions() {
+    public List<positionOB>  getPositions() {
         return positions;
     }
 
@@ -111,11 +111,11 @@ public class UserOB extends BaseOB {
         this.address = address;
     }
 
-    public void setPositions(List<PositionOB> positions) {
+    public void setPositions(List<positionOB> positions) {
         this.positions = positions;
     }
 
-    public void addPosition(PositionOB position) {
+    public void addPosition(positionOB position) {
         this.positions.add(position);
     }
 

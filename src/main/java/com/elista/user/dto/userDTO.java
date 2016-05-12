@@ -3,17 +3,17 @@ package com.elista.user.dto;
 import java.io.Serializable;
 import java.util.List;
 
+import com.elista.base.dto.baseDTO;
+import com.elista.position.dto.positionDTO;
 import org.joda.time.DateTime;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
-import com.elista.base.dto.BaseDTO;
-import com.elista.position.dto.PositionDTO;
 import io.swagger.annotations.ApiModel;
 
 /**
  * Created by Thrundi on 2016-05-03.
  */
 @ApiModel
-public class UserDTO extends BaseDTO implements Serializable {
+public class userDTO extends baseDTO implements Serializable {
     private String email;
     private String password;
     private String name;
@@ -21,17 +21,17 @@ public class UserDTO extends BaseDTO implements Serializable {
     private String phoneNumber;
     private String address;
     private DateTime activeUntil;
-    private List<PositionDTO> positions;
+    private List<positionDTO> positions;
 
-    public UserDTO() {
+    public userDTO() {
     }
 
-    public UserDTO(Long id, String password, String email) {
+    public userDTO(Long id, String password, String email) {
         setPassword(password);
         this.email = email;
     }
 
-    public UserDTO(long id, List<PositionDTO> positions, String email, String password, String name, String surname, String phoneNumber, String address, DateTime activeUntil) {
+    public userDTO(long id, List<positionDTO> positions, String email, String password, String name, String surname, String phoneNumber, String address, DateTime activeUntil) {
         super(id);
         this.positions = positions;
         this.email = email;
@@ -68,7 +68,7 @@ public class UserDTO extends BaseDTO implements Serializable {
         return address;
     }
 
-    public List<PositionDTO> getPositions() {
+    public List<positionDTO> getPositions() {
         return positions;
     }
 
@@ -101,7 +101,7 @@ public class UserDTO extends BaseDTO implements Serializable {
         this.address = address;
     }
 
-    public void addPosition(PositionDTO position) {
+    public void addPosition(positionDTO position) {
         this.positions.add(position);
     }
 
