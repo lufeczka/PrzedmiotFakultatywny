@@ -2,26 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0b9a9a53-60ac-4324-bd68-ae47565905e7" name="Default" comment="Czyszczenie impor">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/elista/base/dto/BaseDTO.class" afterPath="$PROJECT_DIR$/target/classes/com/elista/base/dto/BaseDTO.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/elista/base/ob/BaseOB.class" afterPath="$PROJECT_DIR$/target/classes/com/elista/base/ob/BaseOB.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/elista/functions/converters/PositionConverter.class" afterPath="$PROJECT_DIR$/target/classes/com/elista/functions/converters/PositionConverter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/elista/functions/converters/UserConverter.class" afterPath="$PROJECT_DIR$/target/classes/com/elista/functions/converters/UserConverter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/elista/plan/ob/PlanOB.class" afterPath="$PROJECT_DIR$/target/classes/com/elista/plan/ob/PlanOB.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/elista/plan/ob/PlanSpecOB.class" afterPath="$PROJECT_DIR$/target/classes/com/elista/plan/ob/PlanSpecOB.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/elista/position/dto/PositionDTO.class" afterPath="$PROJECT_DIR$/target/classes/com/elista/position/dto/PositionDTO.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/elista/position/ob/PositionOB.class" afterPath="$PROJECT_DIR$/target/classes/com/elista/position/ob/PositionOB.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/elista/position/repository/IPositionRepository.class" afterPath="$PROJECT_DIR$/target/classes/com/elista/position/repository/IPositionRepository.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/elista/user/api/UserController.class" afterPath="$PROJECT_DIR$/target/classes/com/elista/user/api/UserController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/elista/user/dto/UserDTO.class" afterPath="$PROJECT_DIR$/target/classes/com/elista/user/dto/UserDTO.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/elista/user/ob/UserOB.class" afterPath="$PROJECT_DIR$/target/classes/com/elista/user/ob/UserOB.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/elista/user/repository/IUserRepository.class" afterPath="$PROJECT_DIR$/target/classes/com/elista/user/repository/IUserRepository.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/elista/user/service/UserService.class" afterPath="$PROJECT_DIR$/target/classes/com/elista/user/service/UserService.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/elista/base/ob/baseOB.java" afterPath="$PROJECT_DIR$/src/main/java/com/elista/base/ob/baseOB.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/elista/inout/repository/IInOutRepository.java" afterPath="$PROJECT_DIR$/src/main/java/com/elista/inout/repository/IInOutRepository.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/elista/plan/repository/IPlanSpecRepository.java" afterPath="$PROJECT_DIR$/src/main/java/com/elista/plan/repository/IPlanSpecRepository.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/elista/inout/ob/InOutOB.java" afterPath="$PROJECT_DIR$/src/main/java/com/elista/inout/ob/InOutOB.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/elista/user/repository/IUserRepository.java" afterPath="$PROJECT_DIR$/src/main/java/com/elista/user/repository/IUserRepository.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/persistence.xml" afterPath="$PROJECT_DIR$/target/classes/persistence.xml" />
     </list>
     <ignored path="elista.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -76,18 +59,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="positionDTO.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/elista/position/dto/positionDTO.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="positionOb.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/elista/position/ob/positionOb.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -122,11 +93,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserService.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="UserService.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/elista/user/service/UserService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+            <state relative-caret-position="170">
+              <caret line="10" column="8" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="8" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="InOutOB.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/elista/inout/ob/InOutOB.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="6" column="27" selection-start-line="6" selection-start-column="27" selection-end-line="6" selection-end-column="27" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -139,6 +122,18 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="170">
               <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PlanSpecOB.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/elista/plan/ob/PlanSpecOB.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -178,16 +173,6 @@
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="IPlanSpecRepository.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/elista/plan/repository/IPlanSpecRepository.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="70" selection-start-line="4" selection-start-column="70" selection-end-line="4" selection-end-column="70" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -273,11 +258,11 @@
         <option value="$PROJECT_DIR$/src/main/java/com/elista/position/ob/positionOb.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/elista/user/ob/UserOB.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/elista/functions/converters/UserConverter.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/elista/inout/ob/InOutOB.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/elista/inout/repository/IInOutRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/elista/base/ob/baseOB.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/elista/plan/repository/IPlanSpecRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/elista/user/repository/IUserRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/elista/inout/ob/InOutOB.java" />
       </list>
     </option>
   </component>
@@ -763,6 +748,74 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="plan" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ob" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="elista" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PrzedmiotFakultatywny" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="elista" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="inout" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="repository" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="elista" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PrzedmiotFakultatywny" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="elista" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="inout" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -1331,7 +1384,7 @@
       <workItem from="1462963642092" duration="561000" />
       <workItem from="1463064057772" duration="1504000" />
       <workItem from="1463066194284" duration="105000" />
-      <workItem from="1463066355899" duration="287000" />
+      <workItem from="1463066355899" duration="529000" />
     </task>
     <task id="LOCAL-00001" summary="Konfiguracja JDBC">
       <created>1458666038958</created>
@@ -1445,7 +1498,14 @@
       <option name="project" value="LOCAL" />
       <updated>1462963548417</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Czyszczenie impor">
+      <created>1463066658170</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1463066658170</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1466,7 +1526,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="45439000" />
+    <option name="totallyTimeSpent" value="45681000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1538,7 +1598,8 @@
     <MESSAGE value="Position repository" />
     <MESSAGE value="Poprawki&#10;" />
     <MESSAGE value="ReadMe" />
-    <option name="LAST_COMMIT_MESSAGE" value="ReadMe" />
+    <MESSAGE value="Czyszczenie impor" />
+    <option name="LAST_COMMIT_MESSAGE" value="Czyszczenie impor" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -2421,16 +2482,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/elista/inout/ob/InOutOB.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="17" column="7" selection-start-line="17" selection-start-column="7" selection-end-line="17" selection-end-column="7" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/elista/inout/repository/IInOutRepository.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
@@ -2488,16 +2539,6 @@
         <state relative-caret-position="85">
           <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/elista/plan/ob/PlanSpecOB.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2599,8 +2640,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/elista/user/service/UserService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+        <state relative-caret-position="170">
+          <caret line="10" column="8" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="8" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/elista/plan/ob/PlanSpecOB.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/elista/inout/ob/InOutOB.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="27" selection-start-line="6" selection-start-column="27" selection-end-line="6" selection-end-column="27" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

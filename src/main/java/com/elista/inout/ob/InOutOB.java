@@ -1,14 +1,10 @@
 package com.elista.inout.ob;
 
 import com.elista.base.ob.baseOB;
-import com.elista.plan.ob.PlanOB;
-import com.elista.position.ob.positionOb;
 import com.elista.user.ob.UserOB;
 import org.joda.time.DateTime;
 
 import javax.persistence.*;
-import java.sql.Time;
-import java.util.List;
 
 /**
  * Created by Thrundi on 2016-05-11.
