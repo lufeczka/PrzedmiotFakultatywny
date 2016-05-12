@@ -1,6 +1,6 @@
 package com.elista.position.ob;
 
-import com.elista.base.ob.BaseOB;
+import com.elista.base.ob.baseOB;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -15,7 +15,7 @@ import java.io.Serializable;
 @Entity
 @Table(name = "positions")
 @SequenceGenerator(allocationSize = 1, name = "SEQ", sequenceName = "GEN_POSITIONS_ID")
-public class positionOb extends BaseOB implements Serializable{
+public class positionOb extends baseOB implements Serializable{
 
     @Column(unique = true)
     private String name;

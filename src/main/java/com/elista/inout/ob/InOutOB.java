@@ -1,8 +1,8 @@
 package com.elista.inout.ob;
 
-import com.elista.base.ob.BaseOB;
+import com.elista.base.ob.baseOB;
 import com.elista.plan.ob.PlanOB;
-import com.elista.position.ob.PositionOB;
+import com.elista.position.ob.positionOb;
 import com.elista.user.ob.UserOB;
 import org.joda.time.DateTime;
 
@@ -18,7 +18,7 @@ import java.util.List;
 @Entity
 @Table(name = "inouts")
 @SequenceGenerator(allocationSize = 1, name = "SEQ", sequenceName = "GEN_INOUTS_ID")
-public class InOutOB extends BaseOB {
+public class InOutOB extends baseOB {
 
     @Column(unique = true)
     private DateTime dateFrom;

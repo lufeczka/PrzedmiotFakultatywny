@@ -13,7 +13,7 @@ public class UserConverter {
     public static userDTO UserOBToDTO(UserOB userOB){
         if(userOB == null)
             return null;
-        return new userDTO(userOB.getId(), PositionConverter.PositionOBToDTO(userOB.getPositions()), userOB.getEmail(), userOB.getPassword(), userOB.getName(), userOB.getSurname(), userOB.getPhoneNumber(), userOB.getAddress(), userOB.getActiveUntil());
+        return new userDTO(userOB.getId(), PositionConverter.positionObToDTO(userOB.getPositions()), userOB.getEmail(), userOB.getPassword(), userOB.getName(), userOB.getSurname(), userOB.getPhoneNumber(), userOB.getAddress(), userOB.getActiveUntil());
     }
 
     public static List<userDTO> UserOBToDTO(List<UserOB> UsersOB)

@@ -1,6 +1,6 @@
 package com.elista.plan.ob;
 
-import com.elista.base.ob.BaseOB;
+import com.elista.base.ob.baseOB;
 
 import javax.persistence.Entity;
 import javax.persistence.OneToOne;
@@ -14,7 +14,7 @@ import java.sql.Time;
 @Entity
 @Table(name = "plans_spec")
 @SequenceGenerator(allocationSize = 1, name = "SEQ", sequenceName = "GEN_PLANS_SPEC_ID")
-public class PlanSpecOB extends BaseOB {
+public class PlanSpecOB extends baseOB {
     @OneToOne()
     private PlanOB plan;
     private Short dayOfWeek;
