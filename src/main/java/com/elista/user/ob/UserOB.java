@@ -1,7 +1,7 @@
 package com.elista.user.ob;
 
-import com.elista.base.ob.BaseOB;
-import com.elista.position.ob.positionOB;
+import com.elista.base.ob.baseOB;
+import com.elista.position.ob.positionOb;
 import org.joda.time.DateTime;
 
 import javax.persistence.*;
@@ -14,7 +14,7 @@ import java.util.List;
 @Entity
 @Table(name = "users")
 @SequenceGenerator(allocationSize = 1, name = "SEQ", sequenceName = "GEN_USERS_ID")
-public class UserOB extends BaseOB {
+public class UserOB extends baseOB {
     @Column(unique = true)
     private String email;
     private String password;
@@ -26,7 +26,7 @@ public class UserOB extends BaseOB {
 
     @ManyToMany()
     @JoinColumn(name = "positions_id", referencedColumnName = "id")
-    private List<positionOB> positions;
+    private List<positionOb> positions;
     public UserOB() {
     }
 
@@ -35,7 +35,7 @@ public class UserOB extends BaseOB {
         this.email = email;
     }
 
-    public UserOB(long id, List<positionOB> positions, String email, String password, String name, String surname, String phoneNumber, String address, DateTime activeUntil) {
+    public UserOB(long id, List<positionOb> positions, String email, String password, String name, String surname, String phoneNumber, String address, DateTime activeUntil) {
         this.positions = positions;
         this.email = email;
         this.password = password;
@@ -74,7 +74,7 @@ public class UserOB extends BaseOB {
         return address;
     }
 
-    public List<positionOB>  getPositions() {
+    public List<positionOb>  getPositions() {
         return positions;
     }
 
@@ -106,11 +106,11 @@ public class UserOB extends BaseOB {
         this.address = address;
     }
 
-    public void setPositions(List<positionOB> positions) {
+    public void setPositions(List<positionOb> positions) {
         this.positions = positions;
     }
 
-    public void addPosition(positionOB position) {
+    public void addPosition(positionOb position) {
         this.positions.add(position);
     }
 
