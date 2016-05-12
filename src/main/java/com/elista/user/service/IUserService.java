@@ -1,5 +1,6 @@
 package com.elista.user.service;
 
+import com.elista.user.ob.UserOB;
 import org.jvnet.hk2.annotations.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -9,4 +10,6 @@ import org.springframework.transaction.annotation.Transactional;
 @Service
 @Transactional
 public interface IUserService {
+    UserOB saveUser (UserOB aUserOB);
+    Boolean deleteUser (Long aId);
 }
