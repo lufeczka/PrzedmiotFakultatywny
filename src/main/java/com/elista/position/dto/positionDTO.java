@@ -15,7 +15,6 @@ public class positionDTO extends baseDTO implements Serializable {
     private String code;
     private String division;
 
-
     public positionDTO() {
     }
 
