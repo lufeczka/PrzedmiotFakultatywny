@@ -1,5 +1,7 @@
 package com.elista.base.ob;
 
+import org.joda.time.DateTime;
+
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Date;
