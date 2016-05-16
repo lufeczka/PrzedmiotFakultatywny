@@ -23,4 +23,33 @@ public class InOutOB extends baseOB {
     @OneToOne
     @JoinColumn(name = "users_id", referencedColumnName = "id")
     private UserOB user;
+
+    public InOutOB() {
+    }
+
+    public InOutOB(UserOB user) {
+        this.user = user;
+        this.dateFrom = DateTime.now().toDateTime();
+    }
+
+    public DateTime getDateFrom() {
+        return dateFrom;
+    }
+
+    public void setDateFrom(DateTime dateFrom) {
+        this.dateFrom = dateFrom;
+    }
+
+    public DateTime getDateTo() {
+        return dateTo;
+    }
+
+    public void setDateTo(DateTime dateTo) {
+        this.dateTo = dateTo;
+    }
+
+    public UserOB getUser() {
+        return user;
+    }
+
 }

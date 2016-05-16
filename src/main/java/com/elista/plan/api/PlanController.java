@@ -18,9 +18,8 @@ import java.rmi.ServerException;
 @RequestMapping(value = "/plans")
 public class PlanController {
 
-    //@Autowired
+//    @Autowired
     IPlanService iPlanService;
-
 
     @RequestMapping(value = "/addPlan", method = RequestMethod.POST, consumes = "application/json", produces = "application/json")
     @ResponseBody
@@ -37,11 +36,11 @@ public class PlanController {
     public ResponseEntity<PlanOB> getPlan(@Param("id") long planId){
         //try {
             return new ResponseEntity<PlanOB>(iPlanService.getPlan(planId), HttpStatus.OK);
-
-        /*}catch (Exception e)
+        /*
+        }catch (Exception e)
         {
             return new ResponseEntity<PlanOB>(null, HttpStatus.NOT_FOUND);
         }
-        */
+    */
     }
 }

@@ -4,6 +4,10 @@
              xsi:schemaLocation="http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd" version="2.0">
     <persistence-unit name="default">
         <class>com.elista.user.ob.UserOB</class>
-        <class>com.elista.position.ob.positionOB</class>
+        <class>com.elista.position.ob.positionOb</class>
+        <class>com.elista.inout.ob.InOutOB</class>
+        <class>com.elista.base.ob.baseOB</class>
+        <class>com.elista.plan.ob.PlanOB</class>
+        <class>com.elista.plan.ob.PlanSpecOB</class>
     </persistence-unit>
 </persistence>

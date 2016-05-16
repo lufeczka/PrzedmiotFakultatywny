@@ -18,7 +18,12 @@ import java.util.List;
  */
 
 @Transactional
+@org.springframework.stereotype.Repository
 @RepositoryRestResource(collectionResourceRel = "inouts", path="inouts")
 public interface IInOutRepository extends JpaRepository<InOutOB, Long> {
     List<InOutOB> findByDateFromBetween(DateTime dateFrom, DateTime dateFrom2);
+    List<InOutOB> findByDateToBetween(DateTime dateFrom, DateTime dateFrom2);
+    List<InOutOB> findByDateFromLessThanAndDateFromGreaterThan(DateTime dateFrom, DateTime dateFrom2);
+    List<InOutOB> findByUser(UserOB user);
+    List<InOutOB> findByUserAndDateToIsNull(UserOB user);
 }
