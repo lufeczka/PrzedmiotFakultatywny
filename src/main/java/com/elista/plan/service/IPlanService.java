@@ -3,7 +3,6 @@ package com.elista.plan.service;
 import com.elista.functions.exceptions.NullException;
 import com.elista.plan.ob.PlanOB;
 import org.jvnet.hk2.annotations.Service;
-import org.springframework.context.annotation.Bean;
 import org.springframework.transaction.annotation.Transactional;
 
 /**

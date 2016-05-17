@@ -1,9 +1,7 @@
 package com.elista.inout.api;
 
 import com.elista.inout.service.IInOutService;
-import com.elista.inout.service.InOutService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Bean;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

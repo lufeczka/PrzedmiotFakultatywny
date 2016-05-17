@@ -9,6 +9,7 @@ import java.util.List;
 /**
  * Created by Thrundi on 2016-05-16.
  */
+
 @Service
 @Transactional
 public interface IInOutService {

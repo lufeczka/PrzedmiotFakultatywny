@@ -15,7 +15,7 @@ import java.util.List;
  */
 @Transactional
 @org.springframework.stereotype.Repository
-//@RepositoryRestResource(collectionResourceRel = "users", path = "users")
+@RepositoryRestResource(collectionResourceRel = "users", path = "users")
 public interface IUserRepository extends JpaRepository <UserOB, Long> {
 
     List<UserOB> findByNameStartsWith(@Param("name") String name);

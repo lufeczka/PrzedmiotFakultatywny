@@ -2,7 +2,6 @@ package com.elista.inout.service;
 
 import com.elista.inout.ob.InOutOB;
 import com.elista.inout.repository.IInOutRepository;
-import com.elista.user.ob.UserOB;
 import com.elista.user.repository.IUserRepository;
 import org.joda.time.DateTime;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -46,6 +45,7 @@ public class InOutService implements IInOutService {
         }
         return result;
     }
+
     @Override
     public List<InOutOB> findByUserId(Long user_id) {
         return iInOutRepository.findByUser(iUserRepository.findOne(user_id));

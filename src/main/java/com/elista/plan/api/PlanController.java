@@ -8,8 +8,6 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.rmi.ServerException;
-
 /**
  * Created by Thrundi on 2016-05-12.
  */
@@ -18,10 +16,10 @@ import java.rmi.ServerException;
 @RequestMapping(value = "/plans")
 public class PlanController {
 
-//    @Autowired
+    @Autowired
     IPlanService iPlanService;
 
-    @RequestMapping(value = "/addPlan", method = RequestMethod.POST, consumes = "application/json", produces = "application/json")
+    @RequestMapping(value = "addPlan", method = RequestMethod.POST, consumes = "application/json", produces = "application/json")
     @ResponseBody
     public ResponseEntity<Long> savePlan(@RequestBody PlanOB planOB) {
         try {
@@ -31,16 +29,18 @@ public class PlanController {
         }
     }
 
-    @RequestMapping(value = "/getPlanById?id={id}", method = RequestMethod.GET)
+    @RequestMapping(value = "getPlanById?id={id}", method = RequestMethod.GET)
     @ResponseBody
-    public ResponseEntity<PlanOB> getPlan(@Param("id") long planId){
-        //try {
+    public ResponseEntity<PlanOB> getPlan(@PathVariable("id") Long planId){
+//        try {
+//            Long id = Long.parseLong(planId);
             return new ResponseEntity<PlanOB>(iPlanService.getPlan(planId), HttpStatus.OK);
-        /*
-        }catch (Exception e)
-        {
-            return new ResponseEntity<PlanOB>(null, HttpStatus.NOT_FOUND);
-        }
-    */
+
+//        }catch (Exception e)
+//        {
+//            return new ResponseEntity<PlanOB>(null, HttpStatus.NOT_FOUND);
+//        }
     }
+
+
 }

@@ -21,9 +21,6 @@ public class PlanService implements IPlanService {
     @Autowired
     IPlanRepository iPlanRepository;
 
-    public PlanService() {
-    }
-
     @Override
     public long savePlan(PlanOB planOB) throws NullException {
 
