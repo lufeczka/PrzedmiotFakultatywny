@@ -49,7 +49,7 @@ public class UserService implements IUserService{
     @Override
     public Boolean updateUserPassword(Long aId, String oldPassword, String newPassword) {
         UserOB user = iUserRepository.findOne(aId);
-        if (user.getPassword() == oldPassword) {
+        if (user.getPassword().equals(oldPassword)) {
             user.setPassword(newPassword);
             iUserRepository.save(user);
             return true;

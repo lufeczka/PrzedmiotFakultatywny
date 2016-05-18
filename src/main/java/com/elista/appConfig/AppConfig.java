@@ -7,6 +7,7 @@ import org.springframework.context.annotation.Configuration;
 /**
  * Created by Thrundi on 2016-05-17.
  */
+
 @Configuration
 public class AppConfig {
     @Bean

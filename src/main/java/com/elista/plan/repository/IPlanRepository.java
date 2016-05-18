@@ -22,6 +22,4 @@ import java.util.List;
 public interface IPlanRepository extends JpaRepository<PlanOB, Long> {
     List<PlanOB> findByNameStartsWith(@Param("name") String name);
     List<PlanOB> findByCodeStartsWith(@Param("code") String code);
-    @Query("SELECT p FROM PlanOB p JOIN p.users u where u.id = ?1")
-    List<PlanOB> findByUserId(@Param("user_id") Long id);
 }
