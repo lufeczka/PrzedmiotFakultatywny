@@ -40,6 +40,12 @@ public class PlanOB extends baseOB {
         this.position = position;
     }
 
+    public PlanOB(positionOb position, String code, String name) {
+        this.position = position;
+        this.code = code;
+        this.name = name;
+    }
+
     public String getName() {
         return name;
     }

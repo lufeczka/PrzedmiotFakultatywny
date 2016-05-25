@@ -16,8 +16,10 @@ import javax.persistence.*;
 @SequenceGenerator(allocationSize = 1, name = "SEQ", sequenceName = "GEN_INOUTS_ID")
 public class InOutOB extends baseOB {
 
-    @Column(unique = true)
+    //@Column(columnDefinition = "timestamp without time zone")
     private DateTime dateFrom;
+
+    //@Column(columnDefinition = "timestamp without time zone")
     private DateTime dateTo;
 
     @OneToOne

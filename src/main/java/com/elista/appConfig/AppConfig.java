@@ -1,5 +1,7 @@
 package com.elista.appConfig;
 
+import com.elista.inout.service.IInOutService;
+import com.elista.inout.service.InOutService;
 import com.elista.plan.service.PlanService;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -14,4 +16,7 @@ public class AppConfig {
     public PlanService planService(){
         return new PlanService();
     }
+
+    @Bean
+    public IInOutService iInOutService() { return new InOutService(); }
 }

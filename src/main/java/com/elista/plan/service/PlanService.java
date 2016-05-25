@@ -22,7 +22,7 @@ public class PlanService implements IPlanService {
     IPlanRepository iPlanRepository;
 
     @Override
-    public long savePlan(PlanOB planOB) throws NullException {
+    public Long savePlan(PlanOB planOB) throws NullException {
 
         if (planOB == null)
             throw new NullException("Parameter invalid", HttpStatus.NOT_FOUND, new HttpHeaders());

@@ -8,6 +8,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import javax.persistence.EntityManager;
+import javax.persistence.Query;
+import java.sql.Timestamp;
 import java.util.List;
 
 /**
@@ -23,6 +26,9 @@ public class InOutService implements IInOutService {
 
     @Autowired
     IUserRepository iUserRepository;
+
+    @Autowired
+    EntityManager entityManager;
 
     public InOutService() {
     }
@@ -49,5 +55,13 @@ public class InOutService implements IInOutService {
     @Override
     public List<InOutOB> findByUserId(Long user_id) {
         return iInOutRepository.findByUser(iUserRepository.findOne(user_id));
+    }
+
+    public DateTime timeToday (Long user_id) {
+        String str = "Select sum(inouts.dateTo - inouts.dateFrom) from inouts where inouts.user_id = :user_id";
+        Query query = (Query) entityManager.createNativeQuery(str, DateTime.class);
+        query.setParameter("user_id", user_id);
+        List<DateTime> result = query.getResultList();
+        return result.get(0).toDateTime();
     }
 }

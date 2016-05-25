@@ -24,11 +24,4 @@ public interface IInOutRepository extends JpaRepository<InOutOB, Long> {
     List<InOutOB> findByDateFromLessThanAndDateFromGreaterThan(DateTime dateFrom, DateTime dateFrom2);
     List<InOutOB> findByUser(UserOB user);
     List<InOutOB> findByUserAndDateToIsNull(UserOB user);
-//    @Query("SELECT SUM(FUNC('TIME_TO_SEC', inout.timeFrom)) from InOutOB inout JOIN inout.users u where u.id = ?1")
-//    List<DateTime> findTimeByUserId(@Param("user_id") Long id);
-    /*
-
-    @Query("SELECT ps FROM PlanSpecOB ps JOIN ps.plan p JOIN p.users u where u.id = ?1")
-    List<PlanSpecOB> findByUserId(@Param("user_id") Long id);
-     */
 }
