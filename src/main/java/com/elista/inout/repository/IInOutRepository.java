@@ -24,4 +24,6 @@ public interface IInOutRepository extends JpaRepository<InOutOB, Long> {
     List<InOutOB> findByDateFromLessThanAndDateFromGreaterThan(DateTime dateFrom, DateTime dateFrom2);
     List<InOutOB> findByUser(UserOB user);
     List<InOutOB> findByUserAndDateToIsNull(UserOB user);
+    List<InOutOB> findByUserAndDateFromGreaterThanAndDateFromLessThan(UserOB user, DateTime dateFrom, DateTime dateFrom2);
+    List<InOutOB> findByUserAndDateFromGreaterThan(UserOB user, DateTime dateFrom);
 }
