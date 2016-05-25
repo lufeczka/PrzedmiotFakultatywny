@@ -69,19 +69,4 @@ public class PlanController {
             return new ResponseEntity<PlanOB>(HttpStatus.NOT_MODIFIED);
         }
     }
-
-    /*
-
-    @RequestMapping(value = "inout", method = RequestMethod.GET)
-    @ResponseBody
-    public ResponseEntity<String> InOut(@RequestParam("user_id") Long user_id){
-        try{
-            return new ResponseEntity<String> (iInOutService.inOut(user_id), HttpStatus.OK);
-        } catch (Exception e) {
-            return new ResponseEntity<String>(e.getMessage(), HttpStatus.NOT_MODIFIED);
-        }
-    }
-     */
-
-
 }

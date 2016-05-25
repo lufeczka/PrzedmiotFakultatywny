@@ -30,13 +30,23 @@ public class UserOB extends baseOB {
     public UserOB() {
     }
 
-    public UserOB(Long id, String password, String email) {
+    public UserOB(String password, String email) {
         setPassword(password);
         this.email = email;
     }
 
-    public UserOB(long id, List<positionOb> positions, String email, String password, String name, String surname, String phoneNumber, String address, DateTime activeUntil) {
+    public UserOB(List<positionOb> positions, String email, String password, String name, String surname, String phoneNumber, String address, DateTime activeUntil) {
         this.positions = positions;
+        this.email = email;
+        this.password = password;
+        this.name = name;
+        this.surname = surname;
+        this.phoneNumber = phoneNumber;
+        this.address = address;
+        this.activeUntil = activeUntil;
+    }
+
+    public UserOB(String email, String password, String name, String surname, String phoneNumber, String address, DateTime activeUntil) {
         this.email = email;
         this.password = password;
         this.name = name;
