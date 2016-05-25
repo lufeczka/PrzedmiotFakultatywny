@@ -2,10 +2,12 @@ package com.elista.plan.api;
 
 import com.elista.functions.exceptions.NullException;
 import com.elista.plan.ob.PlanOB;
+import com.elista.plan.repository.IPlanRepository;
 import com.elista.plan.service.IPlanService;
 import com.elista.position.ob.positionOb;
 import com.elista.position.repository.IPositionRepository;
 import com.sun.xml.internal.ws.api.message.ExceptionHasMessage;
+import com.sun.xml.internal.ws.developer.Serialization;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.repository.query.Param;
 import org.springframework.http.HttpHeaders;
@@ -20,6 +22,10 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @RequestMapping(value = "/plans")
 public class PlanController {
+
+
+    @Autowired
+    IPlanRepository iPlanRepository;
 
     @Autowired
     IPlanService iPlanService;
@@ -37,9 +43,9 @@ public class PlanController {
         }
     }
 
-    @RequestMapping(value = "getPlanById/{id}", method = RequestMethod.GET)
+    @RequestMapping(value = "getPlanById", method = RequestMethod.GET)
     @ResponseBody
-    public ResponseEntity<PlanOB> getPlan(@PathVariable("id") Long planId){
+    public ResponseEntity<PlanOB> getPlan(@RequestParam("id") Long planId){
         try {
             return new ResponseEntity<PlanOB>(iPlanService.getPlan(planId), HttpStatus.OK);
         }catch (Exception e)
@@ -48,20 +54,34 @@ public class PlanController {
         }
     }
 
-    @RequestMapping(value = "addPlan/{code}/{name}/{position_id}", method = RequestMethod.POST)
+    @RequestMapping(value = "addPlan", method = RequestMethod.GET)
     @ResponseBody
-    public ResponseEntity<PlanOB> addPlan(@PathVariable("code") String code, @PathVariable("name") String name, @PathVariable("position_id") Long position_id)
+    public ResponseEntity<PlanOB> addPlan(@RequestParam("code") String code, @RequestParam("name") String name, @RequestParam("position_id") Long position_id)
     {
         try{
             positionOb position = iPositionRepository.findOne(position_id);
-//            if (position == null)
-//                throw new NullException("Position not found", HttpStatus.NOT_MODIFIED, new HttpHeaders());
+            if (position == null)
+                return new ResponseEntity<PlanOB>(HttpStatus.NOT_MODIFIED);
             PlanOB plan = new PlanOB(position, code, name);
+            iPlanRepository.save(plan);
             return new ResponseEntity<PlanOB>(plan, HttpStatus.OK);
         } catch (Exception e) {
-            return new ResponseEntity<PlanOB>(HttpStatus.OK);
+            return new ResponseEntity<PlanOB>(HttpStatus.NOT_MODIFIED);
         }
     }
+
+    /*
+
+    @RequestMapping(value = "inout", method = RequestMethod.GET)
+    @ResponseBody
+    public ResponseEntity<String> InOut(@RequestParam("user_id") Long user_id){
+        try{
+            return new ResponseEntity<String> (iInOutService.inOut(user_id), HttpStatus.OK);
+        } catch (Exception e) {
+            return new ResponseEntity<String>(e.getMessage(), HttpStatus.NOT_MODIFIED);
+        }
+    }
+     */
 
 
 }

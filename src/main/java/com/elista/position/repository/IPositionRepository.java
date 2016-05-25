@@ -18,4 +18,5 @@ public interface IPositionRepository extends JpaRepository<positionOb, Long> {
     List<positionOb> findByNameEquals(@Param("name") String name);
     List<positionOb> findByCodeEquals(@Param("code") String code);
     List<positionOb> findByDivisionEquals(@Param("division") String division);
+    List<positionOb> findByDivisionEqualsAndNameEquals(@Param("division") String division, @Param("name") String name);
 }
