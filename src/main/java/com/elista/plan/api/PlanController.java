@@ -23,7 +23,6 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping(value = "/plans")
 public class PlanController {
 
-
     @Autowired
     IPlanRepository iPlanRepository;
 
