@@ -1,5 +1,6 @@
 package com.elista.appConfig;
 
+import com.elista.inout.repository.IInOutRepository;
 import com.elista.inout.service.IInOutService;
 import com.elista.inout.service.InOutService;
 import com.elista.plan.service.PlanService;
